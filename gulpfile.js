@@ -31,6 +31,11 @@ function release() {
     var themeName = require('./package.json').name;
     var filename = themeName + '.zip';
 
+	gulp.src('assets/scss/screen.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+		.pipe(gulp.dest('assets/css/'));
     return gulp.src([
         '**',
         '!node_modules', '!node_modules/**',

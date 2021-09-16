@@ -8,7 +8,7 @@
     height: 60%;
     margin-bottom: 5rem;
     text-align: center;
-    color: #a0add5;
+    color: $selection-text !important;
     background: $selection-text-and-header-background no-repeat center center;
     background-size: cover;
 }
@@ -106,14 +106,14 @@
         display: inline-block;
         margin: 0 0 5px 0;
         font-size: 1.5rem;
-        color: #846d8f;
+        color: $silver !important;
     }
      a {
-        color: #846d8f;
+        color: $hyperlink !important;
         text-decoration: none;
         &:hover {
             text-decoration: underline;
-            color: lighten(#846d8f, 10%);
+            color: lighten($heading, 10%) !important;
         }
     }
 
